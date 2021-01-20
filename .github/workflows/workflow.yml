@@ -20,12 +20,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test
-    cache:
-      directories:
-        - "$HOME/.npm"
-        - "$HOME/.npm"
-    deploy:
-      provider: heroku
-      api_key:
-        secure: ${{ secrets.HEROKU_API_KEY }}
-      app: ft-j-dav
+      - uses: akhileshns/heroku-deploy@v3.8.9
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "ft-j-dav"
+          heroku_email: "jamesmikedavies@gmail.com"

@@ -10,3 +10,4 @@ https://medium.com/@pojotorshemi/integration-test-on-express-restful-apis-using-
 
 Heroku set up
 https://dev.to/heroku/deploying-to-heroku-from-github-actions-29ej
+https://github.com/AkhileshNS/heroku-deploy
