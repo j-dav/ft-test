@@ -1,4 +1,4 @@
-name: Express NodeJS CI
+name: Express NodeJS CI Test
 
 on:
   push:
@@ -14,14 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 13
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 13
       - run: npm ci
       - run: npm test
-      - uses: akhileshns/heroku-deploy@v3.8.9
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "ft-j-dav"
-          heroku_email: "jamesmikedavies@gmail.com"
