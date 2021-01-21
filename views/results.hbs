@@ -1,0 +1,14 @@
+<div class="o-grid-row" data-o-grid-colspan="center 12 S10 M6">
+  <div class="o-teaser-collection ">
+    <h2 class="o-teaser-collection__heading o-teaser-collection__heading--full-width">
+      Searched: "{{query}}"
+    </h2>
+    {{#if results}}
+      {{#each results}}
+        {{>teaser result=this}}
+      {{/each}}
+    {{else}}
+      <h2>No results found for {{query}}</h2>
+    {{/if}}
+  </div>
+</div>
