@@ -4,30 +4,15 @@
 <head>
   <title>Headline Search</title>
   <link rel="stylesheet"
-    href='https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^5.0.2,o-colors@^5.0.6,o-typography@^6.1.3,o-header@^8.0.2,o-footer@^7.0.2,o-editorial-typography@^1.0.4,o-normalise@^2.0.1,o-spacing@^2.0.0,o-teaser-collection@^3.0.1,o-teaser@^4.0.0,o-date@^4.0.0,o-buttons@^6.0.8,o-forms@^8.1.12' />
-
-
-
-</head>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>My First Origami Page</title>
+    href='https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^5.2.9,o-colors@^5.3.1,o-typography@^6.4.5,o-header@^8.6.0,o-footer@^7.0.12,o-editorial-typography@^1.1.0,o-normalise@^2.0.7,o-spacing@^2.1.0,o-teaser@^5.2.2,o-date@^4.1.2,o-buttons@^6.2.0,o-forms@^8.4.1,o-teaser-collection@^3.0.8' />
 </head>
 
 <body class="o-colors-page-background">
   {{> header}}
+  {{> searchbox}}
+  {{{body}}}
 
-  <div class="o-grid-container o-typography-wrapper">
-    <div class="o-grid-row" data-o-grid-colspan="center 8">
-      {{{body}}}
-    </div>
-  </div>
+  {{> footer}}
 </body>
-
-</html>
 
 </html>

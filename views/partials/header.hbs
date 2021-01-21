@@ -1,27 +1,30 @@
-<header class="o-header o-header--simple mb-4" data-o-component="o-header" data-o-header--no-js="">
+<header class="o-header o-header--simple" data-o-component="o-header" data-o-header--no-js>
 	<div class="o-header__row o-header__top">
 		<div class="o-header__container">
 			<div class="o-header__top-wrapper">
 
+				<div class="o-header__top-column o-header__top-column--left">
+					<a href="#o-header-search" class="o-header__top-link o-header__top-link--search" aria-controls="o-header-search" title="Open search bar">
+						<span class="o-header__top-link-label">Open search bar</span>
+					</a>
+				</div>
+
 				<div class="o-header__top-column o-header__top-column--center">
-					<a class="o-header__top-logo" href="https://www.ft.com/?edition=uk" title="Go to Financial Times homepage">
+					<!--<div class="o-header__top-takeover"></div>-->
+					<a class="o-header__top-logo" href="/" title="Go to Financial Times homepage">
 						<span class="o-header__visually-hidden">Financial Times</span>
 					</a>
 				</div>
 
+				<div class="o-header__top-column o-header__top-column--right">
+					<!--<div class="o-header__top-takeover"></div>-->
+					<a class="o-header__top-link o-header__top-link--myft" href="/myft" aria-label="My F T">
+						<span class="o-header__visually-hidden">myFT</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="o-header__row o-header__search" role="search">
-		<div class="o-header__container nw-search">
-			<form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
-				<label class="o-header__visually-hidden" for="o-header-search-term-js">Search the <abbr title="Financial Times">FT</abbr></label>
-				<input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search for FT headlines"></input>
-				<button class="o-header__search-submit" type="submit">
-					Search
-				</button>
-			</form>
-		</div>
-	</div>
+
 </header>
