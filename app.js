@@ -1,38 +1,35 @@
 /* eslint-disable no-console */
 require("dotenv").config();
+const express = require("express");
 
 const createError = require("http-errors");
-const express = require("express");
 const path = require("path");
-const handlebars = require("express-handlebars");
-const fetchHeadlines = require("./utils/search");
+const hbs = require("express-handlebars");
+const index = require("./routes/index");
+const search = require("./routes/search");
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 // view engine setup
+app.set("view engine", "hbs");
 app.engine(
-  "handlebars",
-  handlebars({
-    defaultLayout: "main.hbs",
-    extname: ".hbs",
+  "hbs",
+  hbs({
+    extname: "hbs",
+    defaultView: "default",
+    layoutsDir: path.join(__dirname, "/views/layouts/"),
+    partialsDir: path.join(__dirname, "/views/partials/"),
   }),
 );
-app.set("view engine", "hbs");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
-  res.render("home");
-});
-
-app.get("/search", async (req, res) => {
-  const query = req.query.title;
-  const results = await fetchHeadlines(query);
-  res.render("search", { results });
-});
+// Routes
+app.use(index);
+app.use(search);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
