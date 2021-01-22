@@ -1,12 +1,12 @@
-const express = require("express");
+const express = require('express');
 
 const router = express.Router();
-const fetchHeadlines = require("../utils/search");
+const fetchHeadlines = require('../utils/search');
 
-router.get("/search", async (req, res) => {
+router.get('/search', async (req, res) => {
   const query = req.query.q;
   const results = await fetchHeadlines(query);
-  res.render("results", { query, results, layout: "default" });
+  res.render('results', { query, results, layout: 'default' });
 });
 
 module.exports = router;

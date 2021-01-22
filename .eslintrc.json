@@ -13,6 +13,6 @@
         "ecmaVersion": 12
     },
     "rules": {
-        "quotes": [2, "double"]
+        "quotes": [2, "single"]
     }
 }

@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-const fetch = require("node-fetch");
+const fetch = require('node-fetch');
 
 const stringifyQuery = (query) => {
   const queryObject = {
     queryString: `title:"${query}"`,
     resultContext: {
       maxResults: 20,
-      aspects: ["title", "lifecycle", "location", "summary", "editorial"],
+      aspects: ['title', 'lifecycle', 'location', 'summary', 'editorial'],
     },
   };
 
@@ -17,9 +17,9 @@ const fetchHeadlines = async (query) => {
   const results = await fetch(
     `http://api.ft.com/content/search/v1?apiKey=${process.env.FT_API_KEY}`,
     {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: stringifyQuery(query),
     },
