@@ -49,8 +49,11 @@ I followed the process that I currently take when working on projects from initi
 
 Origami was a breeze to use once I understood it, stitching together some modules to create a FT lookalike was fun. I learned I'd like to improve my CSS skills despite heavy usage of React with styled-components using flexbox methodology.
 
+I changed testing library to Mocha/Chai - I tried to quickly learn Jest in order to test an http request for search but ran out of time and found it too cumbersome. I went back and stuck to what I knew worked for me.
+I went OTT and did a simple Cypress journey, as I've just recently used it for a project and wanted to try it again it has an excellent plugin to assess accessbility of your website.
+If I had the time I would focus on writing more thorough tests, but I wanted to show my knowledge of e2e browser testing also.
+
 Few links of articles I used to help develop this app
 - [eslint article](https://medium.com/dwarves-foundation/automatically-lint-prettify-your-javascript-project-using-husky-lint-staged-cae8e685bb06)
-- [jest setup](https://medium.com/@pojotorshemi/integration-test-on-express-restful-apis-using-jest-and-supertest-4cf5d1414ab0)
 - [Heroku setup with GA](https://dev.to/heroku/deploying-to-heroku-from-github-actions-29ej)
 - [Repo for GA](https://github.com/AkhileshNS/heroku-deploy)
