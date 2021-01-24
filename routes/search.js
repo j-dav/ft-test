@@ -6,7 +6,7 @@ const fetchHeadlines = require('../utils/search');
 router.get('/search', async (req, res) => {
   const query = req.query.q;
   const results = await fetchHeadlines(query);
-  res.render('results', { query, results, layout: 'default' });
+  res.render('index', { query, results, layout: 'default' });
 });
 
 module.exports = router;
