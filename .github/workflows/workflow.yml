@@ -1,4 +1,4 @@
-name: Express NodeJS CI Test
+name: build & test
 
 on:
   push:

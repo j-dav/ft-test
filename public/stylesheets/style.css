@@ -1,3 +1,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
+.header-centered {
+  text-align: center;
+  padding: 30px 0px;
+}
